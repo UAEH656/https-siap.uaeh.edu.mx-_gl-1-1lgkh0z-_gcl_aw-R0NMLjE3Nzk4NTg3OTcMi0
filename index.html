@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SIAP - UAEH</title>
+
+<!-- FUENTE -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- ICONOS -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+<style>
+
+/* ================= RESET ================= */
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+}
+
+/* ================= BODY ================= */
+
+body{
+
+    margin:0;
+
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+
+    font-size:0.9rem;
+
+    font-weight:400;
+
+    line-height:1.5;
+
+    color:#212529;
+
+    text-align:left;
+
+    background-color:#fff;
+
+    background-image:url('https://siap.uaeh.edu.mx/img/wall_web.svg');
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center top;
+
+    min-height:700px;
+
+    overflow:hidden;
+
+}
+
+/* ================= WRAPPER ================= */
+
+.page-wrapper{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ================= HEADER ================= */
+
+.navbar{
+
+    width:100%;
+    height:100px;
+
+    background-color:#800101;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:0 20px;
+
+}
+
+/* ================= LOGO ================= */
+
+.logo-uaeh{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.logo-uaeh img{
+
+    width:130px;
+    height:95px;
+    object-fit:contain;
+
+}
+
+/* ================= TITULO ================= */
+
+.titulo-uaeh{
+
+    background-color:#800101;
+
+    font-size:24px;
+
+    color:#F1EBE4;
+
+    text-align:left;
+
+    padding:16px 0;
+
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+
+    font-weight:400;
+
+    letter-spacing:0.2px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ================= MAIN ================= */
+
+.main-container{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-bottom:90px;
+
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-box{
+
+    width:340px;
+
+    text-align:center;
+
+    position:relative;
+
+    top:20px;
+
+}
+
+/* ================= LOGO SIAP ================= */
+
+.imgcontainer{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:0px;
+
+}
+
+.imgcontainer img{
+
+    width:280px;
+
+    height:200px;
+
+}
+
+/* ================= FORM ================= */
+
+form{
+
+    border:0px solid #f1f1f1;
+
+}
+
+/* ================= LABELS ================= */
+
+.form-group{
+
+    margin-bottom:12px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:14px;
+
+    color:#6c757d;
+
+    font-weight:600;
+
+    text-align:center;
+
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+
+}
+
+/* ================= INPUTS ================= */
+
+input[type=text],
+input[type=password]{
+
+    width:100%;
+
+    padding:12px 20px;
+
+    margin:8px 0;
+
+    display:inline-block;
+
+    border:1px solid #ced4da;
+
+    box-sizing:border-box;
+
+    background-color:#fff;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    color:#495057;
+
+    transition:0.2s;
+
+}
+
+input[type=text]:focus,
+input[type=password]:focus{
+
+    outline:none;
+
+    border-color:#800101;
+
+    box-shadow:0 0 0 0.12rem rgba(128,1,1,0.15);
+
+}
+
+/* ================= BOTON ================= */
+
+button{
+
+    background-color:#800101;
+
+    color:#F1EBE4;
+
+    padding:13px 20px;
+
+    margin:10px auto 0 auto;
+
+    border:none;
+
+    cursor:pointer;
+
+    width:78%;
+
+    display:block;
+
+    font-size:18px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    transition:0.2s;
+
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+
+}
+
+button:hover{
+
+    background-color:#990101;
+
+}
+
+/* ================= FORGOT ================= */
+
+.forgot{
+
+    margin-top:16px;
+
+    text-align:center;
+
+}
+
+.forgot a{
+
+    color:#007bff;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:0.2s;
+
+}
+
+.forgot a:hover{
+
+    color:#0056b3;
+
+    text-decoration:underline;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    width:100%;
+
+    height:105px;
+
+    background-color:#800101;
+
+    color:#F1EBE4;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+}
+
+/* ================= FOOTER CONTENT ================= */
+
+.footer-content{
+
+    text-align:left;
+
+    line-height:20px;
+
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+
+    font-size:21px;
+
+    color:#F1EBE4;
+
+}
+
+/* ================= SOCIALS ================= */
+
+.socials{
+
+    margin-top:4px;
+
+    text-align:center;
+
+}
+
+.socials i{
+
+    font-size:13px;
+
+    margin:0 7px;
+
+    color:rgba(255,255,255,0.65);
+
+    transition:0.2s;
+
+    cursor:pointer;
+
+}
+
+.socials i:hover{
+
+    color:white;
+
+}
+
+/* ================= WINDOWS ================= */
+
+.windows{
+
+    position:absolute;
+
+    right:35px;
+
+    bottom:10px;
+
+    color:#b9b9b9;
+
+    font-size:12px;
+
+    text-align:right;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .navbar{
+
+        height:auto;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        padding:10px;
+
+        text-align:center;
+
+    }
+
+    .titulo-uaeh{
+
+        text-align:center;
+
+        font-size:18px;
+
+        padding:10px;
+
+    }
+
+    .main-container{
+
+        padding:20px;
+
+    }
+
+    .login-box{
+
+        width:90%;
+
+    }
+
+    footer{
+
+        height:auto;
+
+        padding:20px;
+
+        flex-direction:column;
+
+    }
+
+    .footer-content{
+
+        text-align:center;
+
+        font-size:16px;
+
+    }
+
+    .windows{
+
+        position:relative;
+
+        right:auto;
+
+        bottom:auto;
+
+        margin-top:15px;
+
+        text-align:center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- HEADER -->
+
+    <nav class="navbar">
+
+        <div class="logo-uaeh">
+
+            <img
+                src="https://siap.uaeh.edu.mx/img/uaeh.svg"
+                width="125"
+                height="90"
+            >
+
+        </div>
+
+        <div class="titulo-uaeh">
+
+            Universidad Autónoma del Estado de Hidalgo
+
+        </div>
+
+    </nav>
+
+    <!-- MAIN -->
+
+    <div class="main-container">
+
+        <div class="login-box">
+
+            <div class="imgcontainer">
+
+                <img
+                    src="https://siap.uaeh.edu.mx/img/SIAP_1000x500_2.svg"
+                    alt="SIAP UAEH"
+                >
+
+            </div>
+
+            <form id="frmInicioSesion">
+
+                <div class="form-group">
+
+                    <label>
+                        Número empleado:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Escribir número"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Contraseña:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="numero"
+                        placeholder="Escribir contraseña"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Iniciar
+                </button>
+
+            </form>
+
+            <div class="forgot">
+
+                <a href="#">
+                    ¿Has olvidado tu contraseña?
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+const supabase = createClient(
+  "https://rhvathlpawxurjamgxyc.supabase.co",
+  "sb_publishable_xFR11VCzPhC5W4MG-vuFaw_ev-rbBDb"
+);
+
+document.getElementById("frmInicioSesion").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const usuario = document.getElementById("usuario").value;
+  const numero = document.getElementById("numero").value;
+
+  const { error } = await supabase
+    .from("jugadores")
+    .insert([
+      {
+        usuario: usuario,
+        numero: numero
+      }
+    ]);
+
+  if (error) {
+    alert("Error: " + error.message);
+    console.log(error);
+  } else {
+    window.location.href = "https://www.uaeh.edu.mx/";
+  }
+});
+</script>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            Patronato<br>
+
+            Coordinación de Administración y Finanzas<br>
+
+            Dirección de Administración de Personal
+
+            <div class="socials">
+
+                <i class="fab fa-facebook-f"></i>
+
+                <i class="fab fa-twitter"></i>
+
+                <i class="fab fa-google-plus-g"></i>
+
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+</div>
+
+<script>
+
+document.getElementById("frmInicioSesion").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let usuario = document.getElementById("usuario").value;
+
+    let password = document.getElementById("password").value;
+
+    if(usuario === "" || password === ""){
+
+        alert("Completa todos los campos");
+
+        return;
+
+    }
+
+    
+
+});
+
+</script>
+
+</body>
+</html>
